@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     groff-base \
     xvfb \
     wine \
+    libgconf-2-4 \
     --no-install-recommends
 
 # Get Chrome sources
