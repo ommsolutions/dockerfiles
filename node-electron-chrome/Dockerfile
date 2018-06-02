@@ -6,7 +6,7 @@ LABEL tools="libgtk chrome node npm yarn python pip wine electron xvfb"
 
 RUN dpkg --add-architecture i386
 
-RUN wget -nc https://dl.winehq.org/wine-builds/Release.key
+ADD https://dl.winehq.org/wine-builds/Release.key
 RUN sudo apt-key add Release.key
 RUN sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
