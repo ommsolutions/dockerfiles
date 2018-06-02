@@ -7,8 +7,8 @@ LABEL tools="libgtk chrome node npm yarn python pip wine electron xvfb"
 RUN dpkg --add-architecture i386
 
 ADD https://dl.winehq.org/wine-builds/Release.key /wine.key
-RUN sudo apt-key add wine.key
-RUN sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+RUN apt-key add /wine.key
+RUN apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
 # Install deps
 RUN apt-get update && apt-get install -y \
