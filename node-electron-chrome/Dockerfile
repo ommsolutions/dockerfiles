@@ -6,7 +6,8 @@ LABEL tools="libgtk chrome node npm yarn python pip wine electron xvfb"
 
 RUN dpkg --add-architecture i386
 
-RUN apt-get install gpgv
+RUN apt-get update
+RUN apt-get install -y gnupg2
 ADD https://dl.winehq.org/wine-builds/Release.key /wine.key
 RUN apt-key add /wine.key
 RUN apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
