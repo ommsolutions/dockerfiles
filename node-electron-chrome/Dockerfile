@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
     python \
     python-pip \
-    python-minimal \
+    python-minimal
 
 # Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
 # Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
