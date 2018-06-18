@@ -44,6 +44,12 @@ RUN apt-get update && apt-get install -y \
     yarn=1.3.2-1 \
     --no-install-recommends
 
+# Uncomment to install Python
+RUN apt-get update && apt-get install -y \
+    python \
+    python-pip \
+    python-minimal \
+
 # Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
 # Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
 RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.9.1-1nodesource1_amd64.deb > node.deb \
@@ -56,12 +62,6 @@ RUN npm install electron -g --unsafe-perm=true
 # RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 # RUN echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 # RUN apt-get update && apt-get install -y mongodb-org-server
-
-
-# Uncomment to install Python
-# RUN apt-get update && apt-get install -y \
-#     python \
-#     python-pip \
 
 # Install aws cli
 # RUN pip install --upgrade pip setuptools
