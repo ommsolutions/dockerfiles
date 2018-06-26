@@ -20,6 +20,8 @@ RUN apt-get update && apt-get install -y \
     libgtk2.0-0 \
     gnupg \
     git \
+    zip \
+    unzip \
     groff-base \
     xvfb \
 #    winehq-stable \
