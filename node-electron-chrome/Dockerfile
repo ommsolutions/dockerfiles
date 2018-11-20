@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-
+ 
 MAINTAINER Olaf Horstmann <oh@omm-solutions.de>
 LABEL vendor="OMM Solutions GmbH"
 LABEL tools="libgtk chrome node npm yarn python pip wine electron xvfb"
