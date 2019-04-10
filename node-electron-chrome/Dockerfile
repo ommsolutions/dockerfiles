@@ -54,13 +54,11 @@ RUN apt-get update && apt-get install -y \
 
 # Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
 # Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
-# RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.9.1-1nodesource1_amd64.deb > node.deb \
-#  && dpkg -i node.deb \
-#  && rm node.deb
-
-RUN curl https://deb.nodesource.com/node_10.x/pool/main/n/nodejs/nodejs_10.15.3-1nodesource1_amd64.deb > node.deb \
+RUN curl https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/nodejs_8.13.0-1nodesource1_amd64.deb > node.deb \
  && dpkg -i node.deb \
  && rm node.deb
+
+RUN npm install -g npm@6.4.1
 
 RUN npm install electron -g --unsafe-perm=true
 
