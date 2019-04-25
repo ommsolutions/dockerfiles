@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     groff-base \
     xvfb \
-    default-jre \
+#    default-jre \
 #    winehq-stable \
     libgconf-2-4 \
     --no-install-recommends
