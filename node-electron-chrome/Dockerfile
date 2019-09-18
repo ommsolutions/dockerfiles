@@ -71,3 +71,9 @@ RUN npm install electron -g --unsafe-perm=true
 # Install aws cli
 # RUN pip install --upgrade pip setuptools
 # RUN pip install --upgrade awscli
+
+# Install OWASP ZAP (Zed Attack Proxy)
+RUN mkdir /opt/zap/ \
+    && curl -sSL https://github.com/zaproxy/zaproxy/releases/download/v2.8.0/ZAP_2.8.0_Linux.tar.gz > zap.tar.gz \
+    && tar -xzvf zap.tar.gz -C /opt/zap/ \
+    && rm zap.tar.gz
