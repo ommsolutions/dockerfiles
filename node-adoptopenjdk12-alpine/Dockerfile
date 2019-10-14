@@ -5,7 +5,8 @@ LABEL vendor="OMM Solutions GmbH"
 LABEL tools="node npm alpine jdk openjdk adoptopenjdk java"
 
 RUN apk add --no-cache \
-    curl
+    curl \
+	openssh-client
 
 # Install Node
 ARG version=latest
