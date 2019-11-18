@@ -6,11 +6,24 @@ LABEL tools="node npm chromium alpine jdk openjdk adoptopenjdk java"
 
 RUN apk add --no-cache \
     curl \
-	openssh-client \
-	chromium
+	openssh-client
 
-ENV CHROME_BIN /usr/bin/chromium-browser
-ENV LIGHTHOUSE_CHROMIUM_PATH /usr/bin/chromium-browser
+# Installs latest Chromium package.
+RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community > /etc/apk/repositories \
+    && echo @edge http://nl.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories \
+    && apk add --no-cache \
+    libstdc++@edge \
+    chromium@edge \
+    harfbuzz@edge \
+    nss@edge \
+    freetype@edge \
+    ttf-freefont@edge \
+    && rm -rf /var/cache/* \
+    && mkdir /var/cache/apk
+
+
+ENV CHROME_BIN=/usr/bin/chromium-browser \
+    CHROME_PATH=/usr/lib/chromium/
 
 # Install Node
 ARG version=latest
