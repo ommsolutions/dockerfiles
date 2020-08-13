@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
     default-jre \
 #    winehq-stable \
     libgconf-2-4 \
+    libgbm-dev \
     --no-install-recommends
 
 # Get Chrome sources
