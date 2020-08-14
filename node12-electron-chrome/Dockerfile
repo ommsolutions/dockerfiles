@@ -13,7 +13,9 @@ RUN dpkg --add-architecture i386
 #RUN apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
 # Install deps
-RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get install -y \
+ENV TZ=Europe/Berlin
+ENV DEBIAN_FRONTEND=noninteractive 
+RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
