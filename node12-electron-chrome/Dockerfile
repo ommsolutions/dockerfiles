@@ -12,8 +12,6 @@ RUN dpkg --add-architecture i386
 #RUN apt-key add /wine.key
 #RUN apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
-RUN sudo add-apt-repository universe
-
 # Install deps
 ENV TZ=Europe/Berlin
 ENV DEBIAN_FRONTEND=noninteractive 
