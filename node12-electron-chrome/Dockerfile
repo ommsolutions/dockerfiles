@@ -12,6 +12,8 @@ RUN dpkg --add-architecture i386
 #RUN apt-key add /wine.key
 #RUN apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
+RUN sudo add-apt-repository universe
+
 # Install deps
 ENV TZ=Europe/Berlin
 ENV DEBIAN_FRONTEND=noninteractive 
@@ -54,11 +56,9 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
     python2 python2-minimal
 
-# Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
-# Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
-RUN curl https://deb.nodesource.com/node_12.x/pool/main/n/nodejs/nodejs_12.10.0-1nodesource1_amd64.deb > node.deb \
- && dpkg -i node.deb \
- && rm node.deb
+# Nodejs
+RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN apt-get install -y nodejs
 
 RUN npm install -g npm@6.11.3
 
