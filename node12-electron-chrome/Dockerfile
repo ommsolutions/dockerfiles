@@ -52,7 +52,7 @@ RUN apt-get update && apt-get install -y \
 
 # Uncomment to install Python
 RUN apt-get update && apt-get install -y \
-    python2 python2-minimal python2-pip
+    python2 python2-minimal
 
 # Find your desired version here: https://deb.nodesource.com/node_8.x/pool/main/n/nodejs/
 # Ubuntu 16.04.3 LTS (Xenial Xerus) (https://wiki.ubuntu.com/Releases)
