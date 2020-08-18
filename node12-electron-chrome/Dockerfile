@@ -55,8 +55,9 @@ RUN apt-get update && apt-get install -y \
     python2 python2-minimal
 
 # Nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
+RUN apt-get install -y gcc g++ make
 
 RUN npm install -g npm@6.11.3
 
