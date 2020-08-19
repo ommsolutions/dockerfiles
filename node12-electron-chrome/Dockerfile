@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y \
 #    winehq-stable \
     libgconf-2-4 \
     libgbm-dev \
+    udev \
     --no-install-recommends
 
 # Get Chrome sources
