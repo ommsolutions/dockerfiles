@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y \
     libgconf-2-4 \
     libgbm-dev \
     udev \
+    libx11-dev \
     --no-install-recommends
 
 # Get Chrome sources
