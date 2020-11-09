@@ -32,6 +32,8 @@ RUN apt-get update && apt-get install -y \
     libgbm-dev \
     udev \
     libx11-dev \
+    libxtst-dev \
+    libpng++-dev \
     --no-install-recommends
 
 # Get Chrome sources
