@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
     libx11-dev \
     libxtst-dev \
     libpng++-dev \
+    libxss1 \
     --no-install-recommends
 
 # Get Chrome sources
