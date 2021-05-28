@@ -57,14 +57,14 @@ RUN apt-get update && apt-get install -y \
 
 # Uncomment to install Python
 RUN apt-get update && apt-get install -y \
-    python2 python2-minimal
+    python-pip
 
 # Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y gcc g++ make
 
-RUN npm install -g npm@7.14.0
+RUN npm install -g npm@7.15.0
 
 RUN npm install electron -g --unsafe-perm=true
 
