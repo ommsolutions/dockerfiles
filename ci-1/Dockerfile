@@ -57,7 +57,7 @@ RUN apt-get update && apt-get install -y \
 
 # Uncomment to install Python
 RUN apt-get update && apt-get install -y \
-    python-pip
+    python2.7
 
 # Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
