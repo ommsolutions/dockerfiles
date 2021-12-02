@@ -11,6 +11,7 @@ RUN dpkg --add-architecture i386
 #ADD https://dl.winehq.org/wine-builds/Release.key /wine.key
 #RUN apt-key add /wine.key
 #RUN apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+#Edit to update Docker Image
 
 # Install deps
 ENV TZ=Europe/Berlin
