@@ -15,8 +15,9 @@ RUN dpkg --add-architecture i386
 
 # Install deps
 ENV TZ=Europe/Berlin
-ENV DEBIAN_FRONTEND=noninteractive 
-RUN apt-get update && apt-get install -y \
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
